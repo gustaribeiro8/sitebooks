@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Todos os Livros</h2>
+<section>
+  <p>
+    Muitos resultados? <a href="{% url 'books:search' %}">Buscar Livros</a>
+  </p>
+  <p>
+    Não encontrou o livro?
+    <a href="{% url 'movies:create' %}">Adicionar Novo Livro</a>
+  </p>
+</section>
+{% if book_list %}
+<section class="lista-de-cards">...</section>
