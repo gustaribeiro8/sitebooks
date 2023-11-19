@@ -1,13 +1,16 @@
-{% extends 'base.html' %} {% block title %} {{ book.name }} ({{
-    book.release_year }} {% endblock title %} {% block content %}
-    <h2>Detalhes do Livro {{ book.name }} ({{ book.release_year }})</h2>
-    
-    <section class="dados-de-livro">
-      <img src="{{ book.poster_url }}" alt="Capa do livro {{ book.name}}" />
-      <ul>
-        <li>Nome: {{ book.name }}</li>
-        <li>Ano de Publicação: {{ book.release_year }}</li>
-      </ul>
-    </section>
-    
-    {% endblock content %}
+{% extends 'base.html' %} 
+{% block title %}
+  {{ book.name }} ({{book.release_year }})
+{% endblock title %}
+{% block content %}
+<h2>Detalhes do Livro {{ book.name }} ({{ book.release_year }})</h2>
+<section class="dados-de-livro">
+  <img src="{{ book.poster_url }}" alt="Capa do Livro {{ book.name}}" />
+  <ul>
+    <li>Nome: {{ book.name }}</li>
+    <li>Ano de Publicação: {{ book.release_year }}</li>
+    <li><a href="{% url 'books:update' book.id %}">Editar</a></li>
+    <li><a href="{% url 'books:delete' book.id %}">Apagar</a></li>
+  </ul>
+</section>
+{% endblock content %}
