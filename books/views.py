@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from .temp_data import book_data
 from .models import Book
 from django.shortcuts import render
