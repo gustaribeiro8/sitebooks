@@ -90,7 +90,7 @@ def create_review(request, book_id):
             review_text = form.cleaned_data['text']
             review = Review(author=review_author,
                             text=review_text,
-                            movie=book)
+                            book=book)
             review.save()
             return HttpResponseRedirect(
                 reverse('books:detail', args=(book_id, )))
