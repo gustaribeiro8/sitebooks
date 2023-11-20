@@ -10,5 +10,8 @@ urlpatterns = [
     path('create/', views.create_book, name='create'),
     path('update/<int:book_id>/', views.update_book, name='update'),
     path('delete/<int:book_id>/', views.delete_book, name='delete'),
+    path('<int:book_id>/review/', views.create_review, name='review'),
+    path('lists/', views.ListListView.as_view(), name='lists'),
+    path('lists/create', views.ListCreateView.as_view(), name='create-list'),
 
 ]
