@@ -34,7 +34,7 @@
   }
   
   li a {
-    color: var(--bg-color);
+    color: var(--secondary-color-light);
     font-weight: bold;
     text-decoration: none;
   }

@@ -18,7 +18,7 @@
       {% endif %}
     {% endif %}
     {% if book.list_set.all %}
-            <li>Incluso nas listas: {{ book.list_set.all|join:", " }} </li>
+            <li>Incluso nas categorias: {{ book.list_set.all|join:", " }} </li>
         {% endif %}
     <li><a href="{% url 'books:update' book.id %}">Editar</a></li>
     <li><a href="{% url 'books:delete' book.id %}">Apagar</a></li>

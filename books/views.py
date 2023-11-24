@@ -1,5 +1,4 @@
 from django.http import HttpResponseRedirect
-from .temp_data import book_data
 from .models import Book, Review, List, Provider
 from django.urls import reverse, reverse_lazy
 from django.shortcuts import render, get_object_or_404
